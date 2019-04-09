@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AppHinovaMobile</string>
+
+    //Lista oficinas
+    <string name="txtOficinasCarregadas">Oficinas2343</string>
+    <string name="activityCarregarOficina">o893948fICINAS</string>
+
+    //detalhes oficina
+    <string name="activityDetalharOficina">fazer ainda1</string>
+    <string name="txtOficinaDetalhe">fazer ainda2</string>
+    <string name="hintDescCurtaOficina">fazer ainda3</string>
+    <string name="sobreOficina">fazer ainda4</string>
+    <string name="hintDescCompletaOficina">fazer ainda5</string>
+    <string name="enderecoOficina">fazer ainda6</string>
+    <string name="hintEnderecoOficina">fazer ainda7</string>
+    <string name="contatoOficina"> fazer ainda 8</string>
+    <string name="hintEmailOficina"> fazer ainda 9</string>
+    <string name="hintTelefonesOficina"> fazer ainda 10</string>
+
+
+</resources>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Oficinas.DetalhesOficina">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="12dip"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txtInformacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activityDetalharOficina"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDescInformacoes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/txtOficinaDetalhe"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-2dp">
+
+        <LinearLayout
+            android:id="@+id/body"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+            <LinearLayout
+                android:id="@+id/cabecalhoDetalhe"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imgOficinaDetalhada"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:id="@+id/txtCabecalhoDetalhe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNomeOficinaDetalhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_toRightOf="@+id/imgOficinaDetalhada"
+                        android:layout_weight="1"
+                        android:textAlignment="textStart"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Nome da Oficina" />
+
+                    <TextView
+                        android:id="@+id/txtDescricaoCurtaDetalhe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtNomeOficinaDetalhe"
+                        android:layout_alignStart="@+id/txtNomeOficinaDetalhe"
+                        android:layout_weight="1"
+                        android:text="@string/hintDescCurtaOficina"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detalharOficina"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cabecalhoDetalhe"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txtSobreOficina"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="@string/sobreOficina" />
+
+                <TextView
+                    android:id="@+id/txtDescricaoDetalhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDescricaoCurtaDetalhe"
+                    android:layout_alignStart="@+id/fotoOficinaDetalhe"
+                    android:layout_weight="1"
+                    android:text="@string/hintDescCompletaOficina" />
+
+                <TextView
+                    android:id="@+id/txtEnderecoOficina"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/enderecoOficina"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/detalharEndereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtDescricaoDetalhe"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnMaps"
+                        android:layout_width="85dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/txtEnderecoDetalhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDescricaoDetalhe"
+                        android:layout_alignStart="@+id/txtDescricaoDetalhe"
+                        android:layout_toRightOf="@+id/imgBtnMaps"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp"
+
+
+                        android:text="@string/hintEnderecoOficina"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtContatoOficina"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/contatoOficina"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/detalharContato"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/detalharContatoEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imgBtnEmail"
+                            android:layout_width="85dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/txtEmailDetalhe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtEnderecoDetalhe"
+                            android:layout_alignStart="@+id/txtDescricaoDetalhe"
+                            android:layout_weight="1"
+                            android:paddingLeft="15dp"
+                            android:text="@string/hintEmailOficina" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detalharContatoTelefone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imgBtnTel"
+                            android:layout_width="85dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/txtTelefoneDetalhe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtEmailDetalhe"
+                            android:layout_alignStart="@+id/txtEmailDetalhe"
+                            android:layout_weight="1"
+                            android:paddingLeft="15dp"
+                            android:text="@string/hintTelefonesOficina" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
